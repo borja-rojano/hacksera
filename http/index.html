@@ -12,7 +12,14 @@
     <button @click="showViewer()">Viewer</button>
 
     <div id="viewer"  v-if="viewer">
-        <p>Show Viewer</p>
+        <button v-if="pointer>0" @click="pointer--">Previous</button>
+        <button @click="pointer++">Next</button>
+        <div class="picIem" >
+            <div class="picInfo">
+                <h2 class="picTitle">{{pics[pointer].title}}</h2>
+            </div>
+            <img :src="pics[pointer].url" >
+        </div>
     </div>
 
     <div id="picView" v-if="scrollViewer">

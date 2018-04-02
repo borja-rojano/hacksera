@@ -59,7 +59,7 @@ var app = new Vue({
 
     mounted(){
         this.getPics()
-    }
+    },
 })
 
 
