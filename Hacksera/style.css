@@ -1,0 +1,43 @@
+body {
+background-color: #fcfcfc;
+color: #131516;
+}
+
+#app {
+    position: fixed;
+    bottom: 0%;
+    font-family: Verdana, Geneva, sans-serif;
+    padding-left: 25px;
+
+}
+
+#welcome {
+    background-color: #c8d9f4;
+    padding: 20px;
+}
+
+
+.ss{
+font-size: 18px;
+margin-bottom: 35px;
+}
+
+.results {
+font-size: 18px;
+background-color: #c8d9f4;
+margin-left: 30px;
+margin-bottom: 40px;
+padding: 5px 0 5px 20px;
+}
+
+
+#input {
+font-family: inherit;
+font-size: inherit;
+border-width: 0;
+background-color: inherit;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}

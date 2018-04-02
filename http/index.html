@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<div id="app">
+    <h4>{{ message }}</h4>
+    <button @click="showScroll()">Scroll</button>
+    <button @click="showViewer()">Viewer</button>
+
+    <div id="viewer"  v-if="viewer">
+        <p>Show Viewer</p>
+    </div>
+
+    <div id="picView" v-if="scrollViewer">
+        <div class="picIem" v-for="pic in pics">
+            <div class="picInfo">
+                <h2 class="picTitle">{{pic.title}}</h2>
+            </div>
+            <img :src="pic.url" >
+            <hr>
+        </div>
+    </div>
+
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

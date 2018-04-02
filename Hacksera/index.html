@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hacksera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="vue.js"></script>
+<div id="app">
+
+    <div id="welcome">
+        <h1>{{ message }}</h1>
+        <h3 id="intro">
+            A minimalistic fulltext search tool
+        </h3>
+    </div>
+
+    <div v-for="(ss, index) in history">
+        <p class="ss">[ {{ ss.db }}: SS {{index + 1}} ] {{ ss.query }}  </p>
+        <p class="results">Results: {{ss.results}}</p>
+    </div>
+
+    <div id="newSS" class="ss">
+        <span> [ {{ currentDb }}: SS {{ history.length + 1 }} ]</span>
+        <input id="input" type="text" v-model="newQuery" v-on:keyup.enter="update()"  >
+    </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
